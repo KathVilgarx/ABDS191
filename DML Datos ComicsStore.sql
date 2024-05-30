@@ -30,21 +30,22 @@ INSERT INTO Comics (nombre, anio, precio) VALUES
 ('Ms. Marvel: No Normal', 2014, 12.99);
 
 INSERT INTO Inventario (id_comic, cantidad_disponible, disponibilidad) VALUES
-(10, 5, 1),
-(11, 10, 1),
-(12, 8, 1),
-(13, 0, 0),
-(14, 12, 1),
-(15, 7, 1),
-(16, 4, 1),
-(17, 15, 1),
-(18, 9, 1),
-(19, 3, 1),
-(20, 6, 1),
-(21, 0, 0),
-(22, 11, 1),
-(23, 14, 1),
-(24, 2, 1);  
+(12, 5, 1),  -- 'Batman: Year One'
+(14, 10, 1), -- 'Watchmen'
+(16, 8, 1),  -- 'Spider-Man: Blue'
+(18, 0, 0),  -- 'The Dark Knight Returns'
+(20, 12, 1), -- 'Maus'
+(22, 7, 1),  -- 'V for Vendetta'
+(24, 4, 1),  -- 'Sandman: Preludes and Nocturnes'
+(26, 15, 1), -- 'X-Men: Days of Future Past'
+(28, 9, 1),  -- 'Saga, Vol. 1'
+(30, 3, 1),  -- 'Y: The Last Man, Vol. 1'
+(32, 6, 1),  -- 'The Walking Dead, Vol. 1'
+(34, 0, 0),  -- 'Persepolis'
+(36, 11, 1), -- 'Hellboy: Seed of Destruction'
+(38, 14, 1), -- 'Bone: Out from Boneville'
+(40, 2, 1);  -- 'Ms. Marvel: No Normal'
+
 
 INSERT INTO Compras (id_cliente, fecha_compra, total) VALUES
 (1, '2024-05-01', 19.98), 
@@ -56,11 +57,14 @@ INSERT INTO Compras (id_cliente, fecha_compra, total) VALUES
 (7, '2024-05-07', 19.99); 
 
 INSERT INTO Comic_Compras (cantidad, id_compra, id_comic) VALUES
-(2, 100, 10), 
-(1, 103, 10),
-(1, 102, 11),
-(2, 103, 11),
-(1, 104, 12), 
-(2, 105, 13),
-(1, 106, 14),
-(1, 107, 10);
+(2, 100, 12), -- 2x 'Batman: Year One' para Ana García
+(1, 103, 14), -- 1x 'Watchmen' para Luis Martínez
+(1, 106, 12), -- 1x 'Batman: Year One' para Marta Fernández
+(2, 109, 14), -- 2x 'Watchmen' para Marta Fernández
+(1, 112, 16), -- 1x 'Spider-Man: Blue' para Carlos López
+(2, 115, 18), -- 2x 'The Dark Knight Returns' para Elena Rodríguez
+(1, 118, 20); -- 1x 'Maus' para Juan Pérez
+--(1, 107, 12); -- 1x 'Batman: Year One' para Lucía Sánchez
+
+
+select * from Comic_Compras

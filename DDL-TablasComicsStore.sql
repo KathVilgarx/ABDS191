@@ -36,3 +36,6 @@ CREATE TABLE Comic_Compras (
 	FOREIGN KEY (id_compra) REFERENCES Compras (id_compra),
 	FOREIGN KEY (id_comic) REFERENCES Comics (id_comic),
 );
+
+ALTER TABLE Comics
+ALTER COLUMN anio INT;
