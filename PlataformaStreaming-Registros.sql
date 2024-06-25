@@ -10,6 +10,7 @@ INSERT INTO Usuarios (Nombre, Email, Pass, FechaRegistro) VALUES
 	('Diego Romero', 'diego.romero@example.com', 'password9', '2023-09-01'),
 	('Elena Vargas', 'elena.vargas@example.com', 'password10', '2023-10-01')
 ;
+select * from HistorialVisualizacion
 
 INSERT INTO Peliculas (Titulo, Genero, FechasEstreno) VALUES
 	('Titanes del Pacífico', 'Ciencia Ficción', '2010-07-16'),
