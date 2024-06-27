@@ -32,6 +32,7 @@ begin
         SuscripcionID = @suscripcionID;
 end;
 
+--Ejemplos
 EXEC sp_EditarSuscripcion @SuscripcionID = 1, @FechaInicio = '2023-01-01', @FechaFin = '2023-06-01', @Tipo = 'Premium';
 EXEC sp_EditarSuscripcion @SuscripcionID = 2, @FechaInicio = '2023-02-01', @FechaFin = '2023-07-01', @Tipo = 'Basica';
 EXEC sp_EditarSuscripcion @SuscripcionID = 1, @FechaInicio = '2023-03-01', @FechaFin = '2023-08-01', @Tipo = 'Basica';
@@ -47,10 +48,10 @@ begin
     where HistorialID = @HistorialID;
 end;
 
+--Ejemplos
 exec sp_EliminarHistorial 1;
 exec sp_EliminarHistorial 3;
 exec sp_EliminarHistorial 5;
-
 
 select * from HistorialVisualizacion
 
@@ -67,11 +68,11 @@ begin
 	where u.UsuarioID = @usuarioID;
 end;
 
+--Ejemplos
 exec sp_ConsultarUsuarioSuscripcion 1;
 exec sp_ConsultarUsuarioSuscripcion 2;
 exec sp_ConsultarUsuarioSuscripcion 4;
 
-select * from Suscripciones
 
 --> 5.-Consultar que películas fueron reproducidas por el usuario pasando como parámetro el género de la película
 create procedure sp_HistorialPorGenero
@@ -87,6 +88,7 @@ begin
 		p.Genero = @Genero and h.UsuarioID = @usuarioID
 end;
 
+--Ejemplos
 exec sp_HistorialPorGenero 1, fantasia;
 exec sp_HistorialPorGenero 2, comedia;
 exec sp_HistorialPorGenero 3, romance;
